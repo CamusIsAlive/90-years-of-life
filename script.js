@@ -1,3 +1,4 @@
+ 
  // JavaScript code for generating the calendar grid and ticking the boxes
  document.addEventListener('DOMContentLoaded', function() {
     // Get the reference to the calendar container

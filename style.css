@@ -18,7 +18,8 @@
         width: auto;
         height: 7px; /* Adjust the cell height as needed */
         background-color: #ffffff; /* Adjust the cell background color as needed */
-        border-radius: 4px; /* Adjust the border radius for rounded corners */
+        border-radius: 50%; /* Adjust the border radius for rounded corners */
+        border-style: groove;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth effect */
         transition: background-color 0.3s ease; /* Add a transition for smooth color change */
       }
