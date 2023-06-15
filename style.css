@@ -1,0 +1,48 @@
+
+    h1{
+      text-align: center;
+    }
+    .container{
+        width: 800px;
+        margin: 0 auto;
+    }
+    /* Add CSS styles for the calendar grid */
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(52, 1fr); /* Adjust the number of columns as needed */
+        gap: 1px; /* Adjust the gap between cells as needed */
+        background-color: #f0f0f0; /* Adjust the background color as needed */
+        padding: 10px; /* Adjust the padding around the grid as needed */
+      }
+      .calendar-cell {
+        width: auto;
+        height: 7px; /* Adjust the cell height as needed */
+        background-color: #ffffff; /* Adjust the cell background color as needed */
+        border-radius: 4px; /* Adjust the border radius for rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth effect */
+        transition: background-color 0.3s ease; /* Add a transition for smooth color change */
+      }
+
+    .calendar-cell.ticked {
+      background-color: red; /* Adjust the ticked cell background color as needed */
+    }
+    
+    .input-section{
+        margin-bottom: 0.5rem;
+      }
+
+    body{
+      background-image: url("back.jpg.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    #calendarContainer{
+      opacity: 0.8;
+    }
+    h1,
+    label{
+      color: whitesmoke;
+    }
+    label{
+      font-size: 1.2rem;
+    }

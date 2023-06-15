@@ -5,77 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Generate a 90-year calendar based on your birth date.">
-
+  <link rel="stylesheet" href="style.css">
   <!-- Add any necessary CSS links or other head content -->
-
-  <style>
-    .container{
-        width: 800px;
-        margin 0 auto;
-    }
-    /* Add CSS styles for the calendar grid */
-    .calendar-grid {
-      display: grid;
-      grid-template-columns: repeat(52, 1fr); /* Adjust the number of columns as needed */
-      gap: 1px; /* Adjust the gap between cells as needed */
-      background-color: #f0f0f0; /* Adjust the background color as needed */
-    }
-
-    .calendar-cell {
-      width: 5px;
-      height: 5px; /* Adjust the cell height as needed */
-      background-color: #ffffff; /* Adjust the cell background color as needed */
-    }
-
-    .calendar-cell.ticked {
-      background-color: #c0c0c0; /* Adjust the ticked cell background color as needed */
-    }
-  </style>
-
-  <script>
-    // JavaScript code for generating the calendar grid and ticking the boxes
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get the reference to the calendar container
-      const calendarContainer = document.getElementById('calendarContainer');
-
-      // Create the calendar grid
-      const calendarGrid = document.createElement('div');
-      calendarGrid.className = 'calendar-grid';
-
-      // Generate the cells for the calendar grid
-      const numberOfCells = 52 * 90; // Adjust the number of cells based on the desired number of weeks and years
-      for (let i = 0; i < numberOfCells; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'calendar-cell';
-        calendarGrid.appendChild(cell);
-      }
-
-      // Append the calendar grid to the container
-      calendarContainer.appendChild(calendarGrid);
-
-      // Get the reference to the birthdate input and generate button
-      const birthdateInput = document.getElementById('birthdate');
-      const generateBtn = document.getElementById('generateBtn');
-
-      // Function to calculate the number of ticked boxes
-      function calculateTickedBoxes(birthdate) {
-        const currentDate = new Date();
-        const diffInWeeks = Math.floor((currentDate - birthdate) / (1000 * 60 * 60 * 24 * 7));
-        const cells = document.getElementsByClassName('calendar-cell');
-
-        for (let i = 0; i < diffInWeeks; i++) {
-          cells[i].classList.add('ticked');
-        }
-      }
-
-      // Event listener for the generate button
-      generateBtn.addEventListener('click', function() {
-        const birthdate = new Date(birthdateInput.value);
-        calculateTickedBoxes(birthdate);
-      });
-    });
-  </script>
-
 </head>
 <body>
   <div class="container">
@@ -89,6 +20,6 @@
   </div>
 
   <!-- Add any necessary script tags or external JavaScript files -->
-
+<script src="script.js"></script>
 </body>
 </html>
